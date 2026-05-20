@@ -1,7 +1,6 @@
 # config.py - Конфигурация бота
 # =====================================================
 
-GROUP_TOKEN = ""
 GROUP_ID = 237768763
 
 # Ваш ID (постоянный админ)
@@ -10,8 +9,8 @@ OWNER_ID = 1107340870
 # Файлы для хранения данных
 RANKS_FILE = "ranks.json"  # {user_id: rank}
 
-
-OPENROUTER_API_KEY = "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"
+GROUP_TOKEN = os.getenv("VK_GROUP_TOKEN", "")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 GEMINI_VISION_MODEL = "google/gemini-3.1-flash-lite"
 
 MESSAGE_HISTORY_MAXLEN = 200
